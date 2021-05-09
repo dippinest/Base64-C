@@ -18,8 +18,10 @@ size_t base64_buffer_encode(
 ```
 Accepted parameters:
 >_const void* input_data_buffer_ - pointer to a buffer with data to encode.
-_size_t input_data_buffer_size_ - buffer size in bytes with data to encode.
-_char* output_base64_buffer_ - pointer to a buffer for encoded data.
+>
+>_size_t input_data_buffer_size_ - buffer size in bytes with data to encode.
+>
+>_char* output_base64_buffer_ - pointer to a buffer for encoded data.
 
 The return value is the number of bytes of encoded data in the _output_base64_buffer_ buffer.
 
@@ -37,8 +39,10 @@ size_t base64_buffer_decode(
 ```
 Accepted parameters:
 >_const char* input_base64_buffer_ - pointer to a buffer with data to decode.
-_size_t input_base64_buffer_size_ - buffer size in bytes with data to dencode.
-_void* output_data_buffer_ - pointer to a buffer for decoded data.
+>
+>_size_t input_base64_buffer_size_ - buffer size in bytes with data to dencode.
+>
+>_void* output_data_buffer_ - pointer to a buffer for decoded data.
 
 The return value is the number of bytes of decoded data in the _output_data_buffer_ buffer.
 
@@ -52,7 +56,8 @@ void base64_file_encode(FILE* fin, FILE* fout);
 ```
 Accepted parameters:
 >_FILE* fin_ - pointer to the file descriptor with the data to encode.
-_FILE* fout_ - pointer to the file descriptor where the encoded data will be placed.
+>
+>_FILE* fout_ - pointer to the file descriptor where the encoded data will be placed.
 
 There are no return values.
 
@@ -65,7 +70,8 @@ void base64_file_decode(FILE* fin, FILE* fout);
 ```
 Accepted parameters:
 >_FILE* fin_ - pointer to the file descriptor with the data to deencode.
-_FILE* fout_ - pointer to the file descriptor where the decoded data will be placed.
+>
+>_FILE* fout_ - pointer to the file descriptor where the decoded data will be placed.
 
 There are no return values.
 
