@@ -127,7 +127,7 @@ int main(int argc, char** argv)
 
 ___
 
-## License
+# License
 
 *MIT License*
 
