@@ -2,7 +2,7 @@
 
 static const char base64_char_array[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-extern size_t base64_buffer_encode(const void* input_data_buffer, size_t input_data_buffer_size, char* output_base64_buffer)
+size_t base64_buffer_encode(const void* input_data_buffer, size_t input_data_buffer_size, char* output_base64_buffer)
 {
 	char current_6bit_value;
 
@@ -59,7 +59,7 @@ extern size_t base64_buffer_encode(const void* input_data_buffer, size_t input_d
 }
 
 
-extern size_t base64_buffer_decode(const char* input_base64_buffer, size_t input_base64_buffer_size, void* output_data_buffer)
+size_t base64_buffer_decode(const char* input_base64_buffer, size_t input_base64_buffer_size, void* output_data_buffer)
 {
 	size_t input_base64_buffer_byte_counter = 0, output_data_buffer_byte_counter = 0;
 
@@ -114,7 +114,7 @@ extern size_t base64_buffer_decode(const char* input_base64_buffer, size_t input
 }
 
 
-extern void base64_file_encode(FILE* fin, FILE* fout)
+void base64_file_encode(FILE* fin, FILE* fout)
 {
 
 	uint8_t current_6bit_value;
@@ -172,7 +172,7 @@ extern void base64_file_encode(FILE* fin, FILE* fout)
 }
 
 
-extern void base64_file_decode(FILE* fin, FILE* fout)
+void base64_file_decode(FILE* fin, FILE* fout)
 {
 	char first_part_of_byte, second_part_of_byte;
 
