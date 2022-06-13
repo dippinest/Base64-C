@@ -11,17 +11,17 @@ ___
 
 ```
 size_t base64_buffer_encode(
-    const void* input_data_buffer,
+    const void *input_data_buffer,
     size_t input_data_buffer_size,
-    char* output_base64_buffer
+    char *output_base64_buffer
 );
 ```
 Accepted parameters:
->_const void* input_data_buffer_ - pointer to a buffer with data to encode.
+>_const void *input_data_buffer_ - pointer to a buffer with data to encode.
 >
 >_size_t input_data_buffer_size_ - buffer size in bytes with data to encode.
 >
->_char* output_base64_buffer_ - pointer to a buffer for encoded data.
+>_char *output_base64_buffer_ - pointer to a buffer for encoded data.
 
 The return value is the number of bytes of encoded data in the _output_base64_buffer_ buffer.
 
@@ -32,17 +32,17 @@ ___
 
 ```
 size_t base64_buffer_decode(
-    const char* input_base64_buffer,
+    const char *input_base64_buffer,
     size_t input_base64_buffer_size,
-    void* output_data_buffer
+    void *output_data_buffer
 );
 ```
 Accepted parameters:
->_const char* input_base64_buffer_ - pointer to a buffer with data to decode.
+>_const char *input_base64_buffer_ - pointer to a buffer with data to decode.
 >
 >_size_t input_base64_buffer_size_ - buffer size in bytes with data to dencode.
 >
->_void* output_data_buffer_ - pointer to a buffer for decoded data.
+>_void *output_data_buffer_ - pointer to a buffer for decoded data.
 
 The return value is the number of bytes of decoded data in the _output_data_buffer_ buffer.
 
@@ -52,12 +52,12 @@ ___
 3. Function for encoding of a file
 
 ```
-void base64_file_encode(FILE* fin, FILE* fout);
+void base64_file_encode(FILE *fin, FILE *fout);
 ```
 Accepted parameters:
->_FILE* fin_ - pointer to the file descriptor with the data to encode.
+>_FILE *fin_ - pointer to the file descriptor with the data to encode.
 >
->_FILE* fout_ - pointer to the file descriptor where the encoded data will be placed.
+>_FILE *fout_ - pointer to the file descriptor where the encoded data will be placed.
 
 There are no return values.
 
@@ -66,12 +66,12 @@ ___
 4. Function for decoding of a file
 
 ```
-void base64_file_decode(FILE* fin, FILE* fout);
+void base64_file_decode(FILE *fin, FILE *fout);
 ```
 Accepted parameters:
->_FILE* fin_ - pointer to the file descriptor with the data to deencode.
+>_FILE *fin_ - pointer to the file descriptor with the data to deencode.
 >
->_FILE* fout_ - pointer to the file descriptor where the decoded data will be placed.
+>_FILE *fout_ - pointer to the file descriptor where the decoded data will be placed.
 
 There are no return values.
 
@@ -93,7 +93,7 @@ the null terminator character at the end of the string, because keep this in min
 char encoded_text_buf[500];
 char decoded_text_buf[500];
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	printf("\nOriginal text:\n\n%s\n", orig_text);
 
