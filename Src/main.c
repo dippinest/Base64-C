@@ -11,7 +11,7 @@ the null terminator character at the end of the string, because keep this in min
 char encoded_text_buf[500];
 char decoded_text_buf[500];
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	printf("\nOriginal text:\n\n%s\n", orig_text);
 
