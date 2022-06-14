@@ -77,7 +77,7 @@ There are no return values.
 
 ___
 ___
-The base64_demo.c file provides an example of encoding and decoding a string using the base64_buffer_encode and base64_buffer_decode functions:
+The main.c file provides an example of encoding and decoding a string using the base64_buffer_encode and base64_buffer_decode functions:
 
 ```
 #include <stdio.h>
