@@ -9,7 +9,7 @@ ___
 
 1. Function for encoding of an array (data buffer)
 
-```
+```c
 size_t base64_buffer_encode(
     const void *input_data_buffer,
     size_t input_data_buffer_size,
@@ -30,7 +30,7 @@ ___
 
 2. Function for decoding of an array (data buffer)
 
-```
+```c
 size_t base64_buffer_decode(
     const char *input_base64_buffer,
     size_t input_base64_buffer_size,
@@ -51,7 +51,7 @@ ___
 
 3. Function for encoding of a file
 
-```
+```c
 void base64_file_encode(FILE *fin, FILE *fout);
 ```
 Accepted parameters:
@@ -65,7 +65,7 @@ ___
 
 4. Function for decoding of a file
 
-```
+```c
 void base64_file_decode(FILE *fin, FILE *fout);
 ```
 Accepted parameters:
@@ -79,7 +79,7 @@ ___
 ___
 The main.c file provides an example of encoding and decoding a string using the base64_buffer_encode and base64_buffer_decode functions:
 
-```
+```c
 #include <stdio.h>
 #include <stdint.h>
 
