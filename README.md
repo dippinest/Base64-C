@@ -1,4 +1,4 @@
-# base64C
+# Base64C
 Implementation of base64 encoding and decoding functions for data arrays and files in C
 
 ___
