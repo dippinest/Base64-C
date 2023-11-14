@@ -12,9 +12,9 @@ size_t base64_buffer_encode(const void *input_data_buffer, size_t input_data_buf
 
 size_t base64_buffer_decode(const char *input_base64_buffer, size_t input_base64_buffer_size, void *output_data_buffer);
 
-void base64_file_encode(FILE *fin, FILE *fout);
+int base64_file_encode(FILE *fin, FILE *fout);
 
-void base64_file_decode(FILE *fin, FILE *fout);
+int base64_file_decode(FILE *fin, FILE *fout);
 
 
 #endif
