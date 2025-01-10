@@ -2,13 +2,13 @@
 
 static const char base64_char_array[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-size_t base64_buffer_encode(const void *input_data_buffer, size_t input_data_buffer_size, char *output_base64_buffer)
+size_t base64_buffer_encode(const void* input_data_buffer, size_t input_data_buffer_size, char* output_base64_buffer)
 {
 	if (input_data_buffer == NULL || output_base64_buffer == NULL)
 	{
 		return 0;
 	}
-	
+
 	char current_6bit_value;
 
 	size_t input_data_buffer_byte_counter = 0, output_base64_buffer_byte_counter = 0;
@@ -64,13 +64,13 @@ size_t base64_buffer_encode(const void *input_data_buffer, size_t input_data_buf
 }
 
 
-size_t base64_buffer_decode(const char *input_base64_buffer, size_t input_base64_buffer_size, void *output_data_buffer)
+size_t base64_buffer_decode(const char* input_base64_buffer, size_t input_base64_buffer_size, void* output_data_buffer)
 {
-	if (input_data_buffer == NULL || output_base64_buffer == NULL)
+	if (input_base64_buffer == NULL || output_data_buffer == NULL)
 	{
 		return 0;
 	}
-	
+
 	size_t input_base64_buffer_byte_counter = 0, output_data_buffer_byte_counter = 0;
 
 	char first_part_of_byte, second_part_of_byte;
@@ -124,7 +124,7 @@ size_t base64_buffer_decode(const char *input_base64_buffer, size_t input_base64
 }
 
 
-int base64_file_encode(FILE *fin, FILE *fout)
+int base64_file_encode(FILE* fin, FILE* fout)
 {
 	if (fin == NULL || fout == NULL)
 	{
@@ -188,13 +188,13 @@ int base64_file_encode(FILE *fin, FILE *fout)
 }
 
 
-int base64_file_decode(FILE *fin, FILE *fout)
+int base64_file_decode(FILE* fin, FILE* fout)
 {
 	if (fin == NULL || fout == NULL)
 	{
 		return 1;
 	}
-	
+
 	char first_part_of_byte, second_part_of_byte;
 
 	uint8_t _4bytebuf[4];
