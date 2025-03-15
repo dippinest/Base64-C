@@ -16,13 +16,13 @@ size_t base64_buffer_encode(const void* input_data_buffer, size_t input_data_buf
 	while (input_data_buffer_byte_counter < input_data_buffer_size)
 	{
 		current_6bit_value = ((char*)input_data_buffer)[input_data_buffer_byte_counter] >> 2;
-		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[current_6bit_value];
+		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[(uint8_t)current_6bit_value];
 
 		current_6bit_value = (((char*)input_data_buffer)[input_data_buffer_byte_counter] << 4) |
 			(((char*)input_data_buffer)[input_data_buffer_byte_counter + 1] >> 4);
 		current_6bit_value &= 0x3F;
 
-		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[current_6bit_value];
+		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[(uint8_t)current_6bit_value];
 
 		if ((input_data_buffer_size - input_data_buffer_byte_counter) < 2)
 		{
@@ -40,7 +40,7 @@ size_t base64_buffer_encode(const void* input_data_buffer, size_t input_data_buf
 
 			current_6bit_value &= 0x3F;
 
-			output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[current_6bit_value];
+			output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[(uint8_t)current_6bit_value];
 
 			output_base64_buffer[output_base64_buffer_byte_counter++] = '=';
 
@@ -51,11 +51,11 @@ size_t base64_buffer_encode(const void* input_data_buffer, size_t input_data_buf
 			(((char*)input_data_buffer)[input_data_buffer_byte_counter + 2] >> 6);
 
 		current_6bit_value &= 0x3F;
-		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[current_6bit_value];
+		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[(uint8_t)current_6bit_value];
 
 		current_6bit_value = ((char*)input_data_buffer)[input_data_buffer_byte_counter + 2];
 		current_6bit_value &= 0x3F;
-		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[current_6bit_value];
+		output_base64_buffer[output_base64_buffer_byte_counter++] = base64_char_array[(uint8_t)current_6bit_value];
 
 		input_data_buffer_byte_counter += 3;
 	}
